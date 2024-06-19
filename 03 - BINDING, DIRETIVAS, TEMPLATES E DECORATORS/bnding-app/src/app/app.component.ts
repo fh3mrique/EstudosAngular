@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'bnding-app';
+
+  inputTexto = 'TEXTO BINDING';
+  isDisabled = true;
+
+  enableInput = () => {
+    this.isDisabled = false;
+  }
+
+  disableInput = () => {
+    this.isDisabled = true;
+  }
+
+  showLogInput = () => {
+    console.log(this.inputTexto);
+  }
 }
