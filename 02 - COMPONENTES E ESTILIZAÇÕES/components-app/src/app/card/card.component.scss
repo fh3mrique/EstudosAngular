@@ -31,6 +31,6 @@
     }
 }
 
-::ng-deep .card-button-cancel{
-    background-color: #fd7557 !important;
+:host ::ng-deep .card-button-cancel{
+    background-color: yellow !important;
 }
