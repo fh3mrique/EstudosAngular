@@ -1,4 +1,13 @@
-<input type="text" [value]="inputTexto" [disabled]="isDisabled">
+<!-- [] = enviando valor para propriedade
+     () = recebendo valor da propriedade -->
+
+<input 
+type="text" 
+[value]="inputTexto" 
+[disabled]="isDisabled" 
+(keyup)="handleInputKeyup($event)"
+(input)="handleInputEvent($event)"
+>
 
 <br>
 

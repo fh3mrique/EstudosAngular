@@ -21,4 +21,14 @@ export class AppComponent {
   showLogInput = () => {
     console.log(this.inputTexto);
   }
+
+  handleInputKeyup = (event: KeyboardEvent) =>{
+      const currentText = (event.target as HTMLInputElement).value;
+      console.log(currentText);
+  }
+
+  handleInputEvent = (event: Event) =>{
+      const currentText = (event.target as HTMLInputElement).value;
+      console.log(currentText);
+  }
 }
