@@ -10,6 +10,8 @@ export class AppComponent {
   inputTexto = 'TEXTO BINDING';
   isDisabled = true;
 
+  buttonTitle = "Atributo botão binding"
+
   enableInput = () => {
     this.isDisabled = false;
   }
