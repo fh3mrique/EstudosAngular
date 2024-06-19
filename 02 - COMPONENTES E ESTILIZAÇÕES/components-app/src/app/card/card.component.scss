@@ -30,3 +30,7 @@
         font-weight: bold;
     }
 }
+
+::ng-deep .card-button-cancel{
+    background-color: #fd7557 !important;
+}
