@@ -7,30 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  inputTexto = 'TEXTO BINDING';
-  isDisabled = true;
+  widthButton1 = '110px';
+  widthButton2 = 130;
+  stylesObj = { width: '160px', backgroundColor: 'grey' };
 
-  buttonTitle = "Atributo botão binding"
+  updateStyleObj() {
+    console.log('updateStyleObj');
 
-  enableInput = () => {
-    this.isDisabled = false;
+    this.stylesObj.width = '170px';
+    this.stylesObj.backgroundColor = 'lightblue';
   }
 
-  disableInput = () => {
-    this.isDisabled = true;
+  updateStyleObjCorrect() {
+    console.log('updateStyleObjCorrect');
+
+    this.stylesObj = { width: '170px', backgroundColor: 'lightblue' };
   }
 
-  showLogInput = () => {
-    console.log(this.inputTexto);
-  }
-
-  handleInputKeyup = (event: KeyboardEvent) =>{
-      const currentText = (event.target as HTMLInputElement).value;
-      console.log(currentText);
-  }
-
-  handleInputEvent = (event: Event) =>{
-      const currentText = (event.target as HTMLInputElement).value;
-      console.log(currentText);
+  updateWidth() {
+    this.widthButton2 = 200;
   }
 }
