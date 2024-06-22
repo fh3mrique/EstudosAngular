@@ -1,5 +1,11 @@
 import { Component, Input } from '@angular/core';
 
+
+function handlePlanType(value: string){
+  console.log('Chamou')
+  return value.toUpperCase();
+}
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -10,15 +16,10 @@ export class CardComponent {
   
   private _plantype: string = '';
 
-  @Input('plantypeAlias') 
-  set plantype(value: string){
-    this._plantype = value.toUpperCase();
-  }
-
-  get plantype(): string{
-    return this._plantype;
-  }
-
+  @Input({
+    alias:'plantypeAlias', 
+    transform: (value: string)=> handlePlanType(value)})  
+  plantype: string = '';
 
   buttonCliked = (valueEmitted: boolean) =>{
     console.log('buttonCliked ', valueEmitted);
