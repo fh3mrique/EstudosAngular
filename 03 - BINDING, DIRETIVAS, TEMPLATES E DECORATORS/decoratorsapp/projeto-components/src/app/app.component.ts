@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   cardPlantype = 'Simples';
   cardPlanPrice = 100;
+
+  handlePlanType= (text: string)=>{
+      this.cardPlantype = text;
+  } 
 }
