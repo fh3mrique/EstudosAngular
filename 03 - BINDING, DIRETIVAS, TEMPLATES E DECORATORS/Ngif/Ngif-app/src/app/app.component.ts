@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Ngif-app';
+  minhaProp = true;
+
+  toggleProp = () =>{
+    this.minhaProp = !this.minhaProp;
+  }
 }
