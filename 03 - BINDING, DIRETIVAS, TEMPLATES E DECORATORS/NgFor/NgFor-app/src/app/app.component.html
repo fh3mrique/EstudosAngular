@@ -1,39 +1,18 @@
-<!-- <div class="list">
-  <div class="item item--odd">
-      <p class="item__name">Filipe Lima</p>
-      <p class="item__age">29 anos</p>
-  </div>
-  <div class="item item--highlighted">
-      <p class="item__name">Filipe Lima</p>
-      <p class="item__age">29 anos</p>
-  </div>
-  <div class="item item--odd">
-      <p class="item__name">Filipe Lima</p>
-      <p class="item__age">29 anos</p>
-  </div>
-  <div class="item">
-      <p class="item__name">Filipe Lima</p>
-      <p class="item__age">29 anos</p>
-  </div>
-</div> -->
-
 <div class="list">
-  <div 
-  class="item" 
-  *ngFor="
-    let person of listPeople; 
-    let i = index; 
-    let isodd = odd; 
-    let isLast = last; 
-    let isFirst = first"
-  [class.item--odd]="isodd"
-  [class.item--highlighted]="personIndexSelect === i"
-  (click)="selectPerson(i)"
-  >
-    <p class="item__name">{{i}} - {{person.name}}</p>
-    <p class="item__age">{{i}} - {{person.age}} anos</p>
-
-    <p class="item__age" *ngIf="isFirst">é o primeiro</p>
-    <p class="item__age" *ngIf="isLast">é o ultimo</p>
-  </div>
+  <app-person
+    *ngFor="
+      let person of listPeople; 
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isOdd = odd;"
+    [personName]="person.name"
+    [personAge]="person.age"
+    [personIndex]="i"
+    [isFirst]="isFirst"
+    [isLast]="isLast"
+    [isOdd]="isOdd"
+    [isSelected]="personIndexSelect === i"
+    (personSelected)="selectPerson($event)"
+  ></app-person>
 </div>
