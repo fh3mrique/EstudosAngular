@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'NgStyle-app';
+  fontSize: number = 15;
+  textColor: 'white' | 'orange' = 'white';
+  buttonText: 'Branco' | 'Laranja' = 'Laranja';
+
+  increaseFontSize() {
+    this.fontSize += 5;
+  }
+
+  toggleFontColor() {
+    if (this.textColor === 'white') {
+      this.textColor = 'orange';
+      this.buttonText = 'Branco'
+    }
+    else {
+      this.textColor = 'white';
+      this.buttonText = 'Laranja'
+    }
+  }
+
 }
