@@ -1,7 +1,7 @@
 import { IAddress } from "./address.interface"
 import { IStatus } from "./status.interface";
 
-export interface IUsers {
+export interface IUser {
     nome: string;
     email: string;
     senha: string;
