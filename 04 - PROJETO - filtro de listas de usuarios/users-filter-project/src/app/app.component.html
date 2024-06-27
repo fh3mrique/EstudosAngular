@@ -6,12 +6,12 @@
     </div>
 
     <div class="main-left-div">
-      <app-users-list />
+      <app-users-list (userSelected)="onUserSelected($event)" />
     </div>
 
   </div>
 
   <div class="right-div">
-    <app-user-details [user]="userSelected" />
+    <app-user-details [user]="userSelected" *ngIf="showUserDetails"/>
   </div>
 </div>
