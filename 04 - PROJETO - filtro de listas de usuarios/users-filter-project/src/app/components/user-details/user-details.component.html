@@ -19,8 +19,7 @@
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-headline-medium">Endereço: </span> <span class="mat-headline-small">{{user.endereco.rua}},
-                {{user.endereco.numero}}, {{user.endereco.cidade}} - {{user.endereco.rua}} - {{user.endereco.estado}}
+            <span class="mat-headline-medium">Endereço: </span> <span class="mat-headline-small">{{user.endereco | address}}
             </span>
         </mat-list-item>
         <mat-divider></mat-divider>
