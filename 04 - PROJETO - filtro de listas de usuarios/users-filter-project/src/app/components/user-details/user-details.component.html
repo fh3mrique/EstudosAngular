@@ -6,32 +6,35 @@
         <mat-divider></mat-divider>
 
         <mat-list-item>
-            <span class="mat-headline-medium">Nome: </span> <span class="mat-headline-small">fulano da siçva</span>
+            <span class="mat-headline-medium">Nome: </span> <span class="mat-headline-small">{{user.nome}}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-headline-medium">Email: </span> <span class="mat-headline-small">joaozinhomail.com</span>
+            <span class="mat-headline-medium">Email: </span> <span class="mat-headline-small">{{user.email}}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-headline-medium">Telefone: </span> <span class="mat-headline-small">323424332</span>
+            <span class="mat-headline-medium">Telefone: </span> <span
+                class="mat-headline-small">{{user.telefone}}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-headline-medium">Endereço: </span> <span class="mat-headline-small">fbiergrt</span>
+            <span class="mat-headline-medium">Endereço: </span> <span class="mat-headline-small">{{user.endereco.rua}},
+                {{user.endereco.numero}}, {{user.endereco.cidade}} - {{user.endereco.rua}} - {{user.endereco.estado}}
+            </span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-headline-medium">Status: </span> <span class="mat-headline-small">ativo</span>
+            <span class="mat-headline-medium">Status: </span> <span class="mat-headline-small">{{user.ativo}}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <span class="mat-headline-medium">Função: </span> <span class="mat-headline-small">dev</span>
+            <span class="mat-headline-medium">Função: </span> <span class="mat-headline-small">{{user.funcao}}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
             <span class="mat-headline-medium">Data de Cadastro: </span> <span
-                class="mat-headline-small">dd/MM/yyyy</span>
+                class="mat-headline-small">{{user.dataCadastro}}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
     </mat-list>
