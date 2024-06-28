@@ -16,9 +16,12 @@ export class AppComponent implements OnInit {
 
   showUserDetails: boolean = false;
 
+  usersListFiltered:  IUser[] = [];
+
   ngOnInit() {
     setTimeout(() => {
       this.usersList = UsersList;
+      this.usersListFiltered = this.usersList;
     }, 1);
   }
 
@@ -29,5 +32,27 @@ export class AppComponent implements OnInit {
 
   onFilter(filterOptions: IFilterOptios){
     console.log(filterOptions)
+
+    this.usersListFiltered = this.filterUsersList(filterOptions, this.usersList);
+  }
+
+  //funções para os filtros
+  filterUsersList(filterOptions: IFilterOptios, usersList: IUser[]): IUser[] {
+    let filteredList: IUser[] = [];
+
+    filteredList = this.filterUsersListByName(filterOptions.name, usersList)
+    return filteredList;
+  }
+
+  filterUsersListByName(name: string | undefined, usersList: IUser[]): IUser[] {
+    const NAME_NOT_TYPPED = name === undefined;
+
+    if (NAME_NOT_TYPPED){
+      return usersList;
+    }
+
+    const filteredList = usersList.filter((user) => user.nome.toLowerCase().includes(name.toLocaleLowerCase()));
+
+    return filteredList;
   }
 }
