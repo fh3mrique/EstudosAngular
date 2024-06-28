@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from './interfaces/users/users.interface';
 import { UsersList } from './data/users-list';
+import { IFilterOptios } from './interfaces/filter-optios.interface';
 
 @Component({
   selector: 'app-root',
@@ -24,5 +25,9 @@ export class AppComponent implements OnInit {
   onUserSelected(user: IUser) {
     this.userSelected = user;
     this.showUserDetails = true;
+  }
+
+  onFilter(filterOptions: IFilterOptios){
+    console.log(filterOptions)
   }
 }
