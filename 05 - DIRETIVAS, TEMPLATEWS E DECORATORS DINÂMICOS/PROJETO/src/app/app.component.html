@@ -2,9 +2,9 @@
 <!-- <input type="text" #meuInput ngModel> -->
 
 <!-- Change detection com constructor de serviço -->
-<input type="text" #meuInput>
+<input type="text" #meuInput ngModel>
 
 Valor: {{meuInput.value}} <br>
 
-<button (click)="chargeDetection()">Atualizar</button>
+<button (click)="clicou(meuInput)">Atualizar</button>
 

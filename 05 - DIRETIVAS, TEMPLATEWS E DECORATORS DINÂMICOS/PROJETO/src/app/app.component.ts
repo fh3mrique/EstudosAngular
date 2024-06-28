@@ -1,16 +1,16 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  constructor(
-    private _cdRef: ChangeDetectorRef
-  ){}
 
-  chargeDetection(){
-    this._cdRef.detectChanges()
+export class AppComponent {
+  
+  clicou(input: HTMLInputElement){
+    input.value = 'Atualizado'
   }
+
+
 }
