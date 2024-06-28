@@ -1,10 +1,10 @@
-<!-- Change detection com ngModel -->
-<!-- <input type="text" #meuInput ngModel> -->
 
-<!-- Change detection com constructor de serviço -->
-<input type="text" #meuInput ngModel>
+Meu input: <input type="text" #meuInput>
 
-Valor: {{meuInput.value}} <br>
+<button (click)="updateInputText()">atualizar</button>
+<button (click)="focus()">Foco</button>
 
-<button (click)="clicou(meuInput)">Atualizar</button>
-
+<div #minhaDiv>
+  Conteudo inicial
+</div>
+<button (click)="updateDivContent()">Mudar conteudo div</button>
