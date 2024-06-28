@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'PROJETO';
+  constructor(
+    private _cdRef: ChangeDetectorRef
+  ){}
+
+  chargeDetection(){
+    this._cdRef.detectChanges()
+  }
 }
