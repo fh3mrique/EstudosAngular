@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
 
 @Component({
@@ -7,25 +7,58 @@ import { FilhoComponent } from './filho/filho.component';
   styleUrl: './app.component.scss'
 })
 
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements AfterViewInit {
+  buttonList = [
+    'Botão 1',
+    'Botão 2',
+    'Botão 3',
+  ]
 
-  @ViewChild('meuInput')
-  meuInputEL!: ElementRef<HTMLInputElement>;
-
-  constructor(){
-    console.log('No ciclo de vida do componente o constructor é iniciado primeiro que o OnInit')
-  }
-
-  ngOnInit() {
-    console.log('OnInit: elementos do view estão nulos pq o não foram carregados : ' + this.meuInputEL)
-  }
+  @ViewChildren('meuButton')
+  buttonsEl!: QueryList<ElementRef<HTMLButtonElement>>;
 
   ngAfterViewInit(){
-    console.log('AfterViewInit: elementos do view foram carregados : ' + this.meuInputEL)
-    this.meuInputEL.nativeElement.focus()
+    console.log(this.buttonsEl);
+    console.log(this.buttonsEl.toArray());
+
+    const primeiroBtn = this.buttonsEl.toArray()[0];
+
+    primeiroBtn.nativeElement.style.backgroundColor = 'blue';
+
+    //obersevable: toda vez que um evento de remoção é disparado ele imprimi na tela os buttonsEl
+    this.buttonsEl.changes.subscribe((result) =>{
+      console.log(result)
+    })
   }
 
+  chargeColor(event: Event){
+    console.log(event); //retorna a refeencia para o elemento que tenha o evento de (click)
 
-  
+    const btnElement = event.target as HTMLButtonElement
 
+    btnElement.style.backgroundColor = 'black';
+    btnElement.style.color = 'white';
+  }
+
+  resetButtons(){
+    this.buttonsEl.forEach((btnEl) =>{
+      console.log(btnEl);
+      btnEl.nativeElement.style.backgroundColor = '';
+      btnEl.nativeElement.style.color = '';
+    })
+  }
+
+  first(){
+    // const primeiro = this.buttonsEl.get(0);
+
+    // const primeiro = this.buttonsEl.find((btnEl) => btnEl.nativeElement.className === 'btn-0');
+
+    const primeiro = this.buttonsEl.toArray()[0];
+
+    console.log(primeiro);
+  }
+
+  remove() {
+    this.buttonList.shift();
+  }
 }

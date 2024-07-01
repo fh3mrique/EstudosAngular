@@ -1,1 +1,13 @@
-Meu input: <input type="text" #meuInput>
+<button 
+#meuButton
+*ngFor="let btn of buttonList; let i = index"
+class="btn-{{i}}"
+(click)="chargeColor($event)"
+>{{btn}}
+</button>
+
+<button (click)="resetButtons()">Resetar</button>
+
+<button (click)="first()">Pegar primeiro</button>
+
+<button (click)="remove()">Remover primeiro</button>
