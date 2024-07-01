@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FilhoComponent } from './filho/filho.component';
 
 @Component({
   selector: 'app-root',
@@ -8,23 +9,12 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 
 export class AppComponent {
 
-  @ViewChild("meuInput")
-  meuInputEl!: ElementRef<HTMLInputElement>;
+  @ViewChild('filhoComp')
+  filhoCompRef!: FilhoComponent
 
-  @ViewChild("minhaDiv")
-  minhaDivEL!: ElementRef<HTMLDivElement>;
-  
-  updateInputText(){
-    this.meuInputEl.nativeElement.value = 'Texto atualizado'
+  hello(){
+    this.filhoCompRef.dizerOi();
+    this.filhoCompRef.message = 'eu disse oi';
   }
-
-  focus(){
-    this.meuInputEl.nativeElement.focus()
-  }
-
-  updateDivContent(){
-    this.minhaDivEL.nativeElement.textContent = "Conteudo atualizado"
-  }
-
 
 }
