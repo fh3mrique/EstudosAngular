@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
 
 @Component({
@@ -7,14 +7,25 @@ import { FilhoComponent } from './filho/filho.component';
   styleUrl: './app.component.scss'
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('filhoComp')
-  filhoCompRef!: FilhoComponent
+  @ViewChild('meuInput')
+  meuInputEL!: ElementRef<HTMLInputElement>;
 
-  hello(){
-    this.filhoCompRef.dizerOi();
-    this.filhoCompRef.message = 'eu disse oi';
+  constructor(){
+    console.log('No ciclo de vida do componente o constructor é iniciado primeiro que o OnInit')
   }
+
+  ngOnInit() {
+    console.log('OnInit: elementos do view estão nulos pq o não foram carregados : ' + this.meuInputEL)
+  }
+
+  ngAfterViewInit(){
+    console.log('AfterViewInit: elementos do view foram carregados : ' + this.meuInputEL)
+    this.meuInputEL.nativeElement.focus()
+  }
+
+
+  
 
 }
