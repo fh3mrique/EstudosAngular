@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SemDiretivaComponent } from './sem-diretiva/sem-diretiva.component';
 import { ComDiretivaComponent } from './com-diretiva/com-diretiva.component';
 import { HighLightDirective } from './directives/highlight.directive';
+import { DisabledDirective } from './directives/disabled.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SemDiretivaComponent,
     ComDiretivaComponent,
-    HighLightDirective
+    HighLightDirective,
+    DisabledDirective
   ],
   imports: [
     BrowserModule,

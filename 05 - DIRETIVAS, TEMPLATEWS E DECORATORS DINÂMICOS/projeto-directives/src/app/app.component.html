@@ -1,5 +1,32 @@
-<app-sem-diretiva/>
+<!-- <app-sem-diretiva/>
 
 =================================
 
-<app-com-diretiva/>
+<app-com-diretiva/> -->
+
+
+<!-- 
+1 . disabled diretamente no elemento:
+° Define o atributo disabled diretamente no HTML.
+° O botão estará sempre desabilitado.
+
+2. attr.disabled com binding:
+
+° Define o atributo disabled dinamicamente.
+° Controla a presença do atributo disabled no HTML.
+° Mais manual e pode ser menos intuitivo.
+
+3. disabled com property binding:
+
+° Define a propriedade disabled dinamicamente.
+° Controla a propriedade disabled do elemento diretamente.
+° Abordagem mais idiomática no Angular e mais intuitiva.
+-->
+
+<button disabled>Meu botão</button>
+
+<button [attr.disabled]="false">Meu botão atributo</button>
+
+<button [disabled]="true">Meu botão propriedade</button>
+
+<button appDisabled>Mue botão com diretiva</button>
