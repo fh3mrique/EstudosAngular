@@ -1,0 +1,21 @@
+<p
+(mouseover)="onMouseOver()"
+(mouseout)="onMouseOut()"
+[ngStyle]="{
+    'background-color': addBgColor ? 'orange' : 'transparent',
+}"
+>Parágrafo sem diretiva</p>
+
+
+<!-- 
+Problemas desse Código
+
+Repetitividade: Se você precisar aplicar o mesmo comportamento a múltiplos elementos, 
+terá que duplicar o código.
+
+Manutenibilidade: Se você precisar alterar o comportamento, terá que atualizar cada 
+instância onde o comportamento é aplicado.
+
+Leitura e Organização: O código HTML fica mais confuso e difícil de ler.
+-->
+
