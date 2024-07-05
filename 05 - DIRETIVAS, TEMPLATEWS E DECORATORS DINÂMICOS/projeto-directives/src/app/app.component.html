@@ -31,7 +31,7 @@
 
 <button appDisabled>Mue botão com diretiva</button> -->
 
-<p style="background-color: orangered; color: white;">Parágrafo normal</p>
+<!-- <p style="background-color: orangered; color: white;">Parágrafo normal</p>
 
 <p [attr.style]="'background-color: orangered; color: white;'" >Parágrafo atributo</p>
 
@@ -41,4 +41,17 @@
   color: 'white'
 }" >Parágrafo propriedade Obj</p>
 
-<p appStyle>Diretiva</p>
+<p appStyle>Diretiva</p> -->
+
+<p class="meu-texto">Normal</p>
+
+<p [attr.class]="'meu-texto'">Attr</p>
+
+<p [className]="'meu-texto  meu-size'">Property biding: Class Name</p>
+
+<p [class]="{
+  'meu-texto': true,
+  'meu-size': true,
+}">Property biding: Class</p>
+
+<p appClass>Diretiva</p>
