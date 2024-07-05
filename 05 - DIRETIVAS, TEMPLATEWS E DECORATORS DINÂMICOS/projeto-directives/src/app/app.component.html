@@ -58,6 +58,23 @@
 
 <!-- sem diretiva -->
 <!-- <input (click)="onClick($event)" />
- 
+
  --><!-- com diretiva -->
-<input appListener />
+<!-- <input appListener /> -->
+
+<input 
+appInputBackground="red"
+tColor="white"
+/>
+
+<input 
+appInputBackground
+bgColor="blue"
+tColor="white"
+/>
+
+<input 
+appInputBackground
+[bgColor]="appBgColor"
+tColor="white"
+/>
