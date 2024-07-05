@@ -23,10 +23,22 @@
 ° Abordagem mais idiomática no Angular e mais intuitiva.
 -->
 
-<button disabled>Meu botão</button>
+<!-- <button disabled>Meu botão</button>
 
 <button [attr.disabled]="false">Meu botão atributo</button>
 
 <button [disabled]="true">Meu botão propriedade</button>
 
-<button appDisabled>Mue botão com diretiva</button>
+<button appDisabled>Mue botão com diretiva</button> -->
+
+<p style="background-color: orangered; color: white;">Parágrafo normal</p>
+
+<p [attr.style]="'background-color: orangered; color: white;'" >Parágrafo atributo</p>
+
+<p [style]="'background-color: orangered; color: white;'" >Parágrafo propriedade</p>
+<p [style]="{
+  backgroundColor: 'orangered',
+  color: 'white'
+}" >Parágrafo propriedade Obj</p>
+
+<p appStyle>Diretiva</p>
