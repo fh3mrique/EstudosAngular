@@ -9,6 +9,7 @@ import { HighLightDirective } from './directives/highlight.directive';
 import { DisabledDirective } from './directives/disabled.directive';
 import { StyleDirective } from './directives/style.directive';
 import { ClassDirective } from './directives/class.directive';
+import { ListenerDirective } from './directives/listener.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ClassDirective } from './directives/class.directive';
     HighLightDirective,
     DisabledDirective,
     StyleDirective,
-    ClassDirective
+    ClassDirective,
+    ListenerDirective
   ],
   imports: [
     BrowserModule,
