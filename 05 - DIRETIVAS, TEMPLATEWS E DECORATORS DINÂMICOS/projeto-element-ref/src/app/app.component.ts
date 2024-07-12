@@ -35,4 +35,14 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.divEl.nativeElement.classList.add('minha-classe')
   }
 
+  createElement(){
+    const novaDiv = document.createElement('div');
+
+    novaDiv.textContent = 'Sou uma nova div';
+    //esse estilo só vai funcinar em css global
+    //pq a api do dom tem acesso golbal é o _elRef não
+    novaDiv.classList.add('bg-red');
+
+    this._elRef.nativeElement.appendChild(novaDiv)
+  }
 }
