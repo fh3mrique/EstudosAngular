@@ -8,14 +8,14 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 })
 export class AppComponent implements OnInit, AfterViewInit {
  
-  @ViewChild('minhaDiv')
-  divEl!: ElementRef<HTMLDivElement> 
+  /* @ViewChild('minhaDiv')
+  divEl!: ElementRef<HTMLDivElement>  */
 
-  /* _elRef é uma injeção de depedencia para todo html do componente*/
+  //elRef é uma injeção de depedencia para todo html do componente
   constructor(private readonly _elRef: ElementRef){}
 
   ngOnInit() {
-    console.log(this._elRef);
+    /* console.log(this._elRef);
     const outraDiv = this._elRef.nativeElement.querySelector('#minha-outra-div') as HTMLDivElement;
 
     outraDiv.textContent = 'Sou a outra div';
@@ -26,16 +26,16 @@ export class AppComponent implements OnInit, AfterViewInit {
       console.log('cliquei na div');
     })
 
-    console.log(outraDiv);
+    console.log(outraDiv); */
   }
 
   ngAfterViewInit() {
-    this.divEl.nativeElement.style.backgroundColor = 'orange';
+    /* this.divEl.nativeElement.style.backgroundColor = 'orange';
     this.divEl.nativeElement.textContent = 'sou uma div';
-    this.divEl.nativeElement.classList.add('minha-classe')
+    this.divEl.nativeElement.classList.add('minha-classe') */
   }
 
-  createElement(){
+  /* createElement(){
     const novaDiv = document.createElement('div');
 
     novaDiv.textContent = 'Sou uma nova div';
@@ -44,5 +44,5 @@ export class AppComponent implements OnInit, AfterViewInit {
     novaDiv.classList.add('bg-red');
 
     this._elRef.nativeElement.appendChild(novaDiv)
-  }
+  } */
 }
