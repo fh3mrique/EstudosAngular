@@ -1,0 +1,65 @@
+.balance-card {
+    background-color: white;
+
+    .main{
+        padding: 10px;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: orange;
+        padding: 10px;
+    }
+
+    img{
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .left-content-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .list-balance{
+        list-style: none;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .item-content{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid;
+        padding: 20px;
+    }
+
+    .balance-result{
+        background-color: grey;
+        text-align: center;
+        padding: 10px;
+        
+    }
+
+    .balance-result ul {
+        list-style: none;
+    }
+
+    .item-result{
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        padding: 10px;
+    }
+
+    .magin-botoom{
+        margin-bottom: 20px;
+    }
+
+   
+
+}
