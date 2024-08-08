@@ -1,3 +1,26 @@
-<app-card>
-  <p class="texto">Sou um paragrafo</p>
-</app-card>
+<div class="container">
+  <div class="item">
+    <app-card>
+      <div class="card__header" card-header>
+        <img src="assets/icons/client.svg" class="card__image">
+      </div>
+      <div class="card__content" card-content>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, doloremque, accusamus quibusdam, suscipit incidunt quas non porro nulla iusto reiciendis ipsam distinctio blanditiis nihil mollitia sed exercitationem dignissimos fuga dolorum.</p>
+      </div>
+    </app-card>
+  </div>
+
+  <!-- Agora podemos reutilizar os estilos do card reapoveitanndo o css -->
+  <div class="item">
+    <app-card>
+      <div class="card__header card__header--direction-column" card-header>
+        <h1>Fulano da silva</h1>
+        <img src="assets/icons/client.svg" class="card__image">
+        <h3>Desenvolvedor front-end</h3>
+      </div>
+      <div class="card__content" card-content>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, doloremque, accusamus quibusdam, suscipit incidunt quas non porro nulla iusto reiciendis ipsam distinctio blanditiis nihil mollitia sed exercitationem dignissimos fuga dolorum.</p>
+      </div>
+    </app-card>
+  </div>
+</div>
