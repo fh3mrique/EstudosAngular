@@ -1,0 +1,12 @@
+EX: 1
+
+<!-- ng-template: Define um template que pode ser reutilizado -->
+<ng-template #meuTemplate>
+    <!-- Conteúdo do template que será renderizado quando chamado -->
+    Template:
+    <app-meu-comp></app-meu-comp>
+</ng-template>
+
+<!-- ng-container: Um contêiner lógico que não adiciona elementos ao DOM -->
+<ng-container *ngTemplateOutlet="meuTemplate"></ng-container>
+

@@ -1,0 +1,23 @@
+EX: 3
+
+<br>
+
+<!-- Usando *ngIf e ngTemplateOutlet ao mesmo tempo -->
+<ng-container 
+    *ngIf="condicional; else elseTemplate" 
+    [ngTemplateOutlet]="meuTemplate">
+</ng-container>
+
+
+<!-- Define o primeiro template que será renderizado condicionalmente -->
+<ng-template #meuTemplate>
+    <!-- Este é o conteúdo que será exibido se a condição for verdadeira -->
+    Template:
+    <app-meu-comp></app-meu-comp>
+</ng-template>
+
+<!-- Define o segundo template que será exibido caso a condição seja falsa -->
+<ng-template #elseTemplate>
+    <!-- Este conteúdo será mostrado se a condição for falsa -->
+    SOU O ELSE TEMPLATE
+</ng-template>
