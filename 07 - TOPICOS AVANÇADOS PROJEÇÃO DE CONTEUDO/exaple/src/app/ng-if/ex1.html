@@ -1,0 +1,17 @@
+EX 1:
+<br>
+
+<!-- Não funciona com ngIf diretiva estrutural -->
+<ng-template *ngIf="condicional">
+    Template:
+    <app-meu-comp></app-meu-comp>
+</ng-template>
+
+<ng-template [ngIf]="condicional" [ngIfElse]="elseTemplate">
+    Template:
+    <app-meu-comp></app-meu-comp>
+</ng-template>
+
+<ng-template #elseTemplate>
+    SOU O ELSE TEMPLATE
+</ng-template>
