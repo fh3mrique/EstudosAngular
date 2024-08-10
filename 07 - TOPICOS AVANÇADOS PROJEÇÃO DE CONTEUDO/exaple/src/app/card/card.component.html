@@ -1,0 +1,14 @@
+<!-- Renderiza o template de cabeçalho (header) -->
+<ng-container *ngTemplateOutlet="header"></ng-container>
+
+<!-- Renderiza o template de conteúdo principal (content) -->
+<ng-container *ngTemplateOutlet="content"></ng-container>
+
+<!-- Renderiza o template de rodapé (footer), ou o template de rodapé padrão se 'footer' não for fornecido -->
+<ng-container *ngTemplateOutlet="footer ? footer : defaultFooterTemplate"></ng-container>
+
+<!-- Define um template de rodapé padrão para ser usado caso 'footer' não seja fornecido -->
+<ng-template #defaultFooterTemplate>
+  <!-- Conteúdo padrão do rodapé -->
+  <p>Rodapé Padrão</p>
+</ng-template>
