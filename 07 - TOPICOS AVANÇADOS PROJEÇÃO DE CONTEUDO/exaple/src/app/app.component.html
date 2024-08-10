@@ -1,28 +1,6 @@
-<!-- Definição de um template para o cabeçalho (header) -->
-<ng-template #headerTemplate>
-    <!-- Conteúdo do header que será usado no componente app-card -->
-    <p>Sou um Header</p>
-</ng-template>
-
-<!-- Definição de um template para o conteúdo principal (content) -->
-<ng-template #contentTemplate>
-    <!-- Conteúdo principal que será usado no componente app-card -->
-    <p>Sou um Content</p>
-</ng-template>
-
-<!-- Definição de um template para o rodapé (footer) -->
-<ng-template #footerTemplate>
-    <!-- Conteúdo do footer que será usado no componente app-card -->
-    <p>Sou um Footer</p>
-</ng-template>
-
-<!-- Uso do componente app-card, passando os templates definidos como parâmetros -->
-
-<!-- Passando o template de header como entrada -->
-<!-- Passando o template de conteúdo como entrada -->
-<!-- Passando o template de footer como entrada -->
-<app-card 
-[header]="headerTemplate" 
-[content]="contentTemplate" 
-[footer]="footerTemplate"
-></app-card>
+<app-card>
+    <!-- Define um template chamado 'meuTemplate' que será passado para o componente -->
+    <ng-template #meuTemplate>
+        <app-meu-comp></app-meu-comp>
+    </ng-template>
+</app-card>
