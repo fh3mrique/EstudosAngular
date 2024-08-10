@@ -1,8 +1,8 @@
 <div class="card">
-    <!-- Comentado: ng-content é uma diretiva para transclusão de conteúdo -->
-    <!-- <ng-content></ng-content> -->
+    <ng-container *ngIf="condition; else elseTemplate "></ng-container>
     
-    <!-- Renderiza o conteúdo do template passado usando *ngTemplateOutlet -->
-    <ng-container *ngTemplateOutlet="content">
-    </ng-container>
+    <ng-template #elseTemplate>
+        Nenhum conteúdo para ser projetado
+    </ng-template>
+    
 </div>

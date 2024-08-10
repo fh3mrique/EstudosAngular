@@ -6,6 +6,8 @@ import { Component, ContentChild, Input, TemplateRef } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
+   condition: boolean = false;
+
    // Captura o template com o identificador 'meuTemplate' que é passado para o componente
    @ContentChild('meuTemplate')
    content!: TemplateRef<any>;
