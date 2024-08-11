@@ -17,3 +17,18 @@ Titlecase: {{'filipe de lima' | titlecase}};
 Json: {{user | json}};
 <br>
 Slice: {{'Olá mundo' | slice: 0 : 5}};
+
+<h1>Formato ISO8601</h1>
+<b>{{minhaData | date: 'full'}}</b>
+
+<br><br>
+<b>{{minhaData | date: 'full': '+0000'}}</b>
+
+<h1>Formato Timestamp</h1>
+Timestamp para região: {{1464789600000 | date : 'full'}}
+
+<br><br>
+Timestamp UTC-0: {{1464789600000 | date : 'full': '+0000'}}
+
+<h1>Formato </h1>
+<b>Data convertida para região: {{minhaDataObj | date : 'full'}} </b>

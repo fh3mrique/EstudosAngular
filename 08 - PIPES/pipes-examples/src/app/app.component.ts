@@ -1,15 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   user = {
     nome: 'Filipe',
     idade: 49,
     status: 1
   }
 
+  minhaData: string = '2016-06-01T14:00:00.000Z'
+  minhaDataObj: Date = new Date('2016-06-01T14:00:00.000Z');
+
+  ngOnInit(): void {
+    console.log('Data convertida para região', new Date(this.minhaData));
+    console.log('Data UTC-0', new Date(this.minhaData).toUTCString);
+
+    console.log('Timestamp', new Date(this.minhaData).getTime());
+
+    console.log(this.minhaDataObj)
+  }
 }
