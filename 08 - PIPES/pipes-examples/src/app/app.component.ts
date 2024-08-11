@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'pipes-examples';
+  pessoa = {
+    nome: 'Filipe',
+    idade: 49
+  }
+
 }
