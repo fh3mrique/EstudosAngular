@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  pessoa = {
+  user = {
     nome: 'Filipe',
-    idade: 49
+    idade: 49,
+    status: 1
   }
 
 }
