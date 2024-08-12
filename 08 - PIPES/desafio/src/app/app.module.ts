@@ -1,5 +1,6 @@
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { StatusPipe } from './pipes/status.pipe';
@@ -7,6 +8,7 @@ import { StatusIconPipe } from './pipes/status-icon.pipe';
 
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
+import { FilterPipe } from './pipes/filter.pipe';
 
 registerLocaleData(localePt, 'pt-BR')
 
@@ -14,10 +16,12 @@ registerLocaleData(localePt, 'pt-BR')
   declarations: [
     AppComponent,
     StatusPipe,
-    StatusIconPipe
+    StatusIconPipe,
+    FilterPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [{
     provide:  LOCALE_ID,

@@ -11,6 +11,7 @@ import { take } from 'rxjs';
 export class AppComponent implements OnInit {
 
   operationsList: OperationsListResponse = [];
+  searchTerm: string = '';
 
   constructor(private readonly _operationsService: OperationsService) { }
 
