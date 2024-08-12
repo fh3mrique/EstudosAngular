@@ -1,35 +1,10 @@
-<!--
-  1. Atribuição de valor literal:
-  Este input sempre terá o valor 'teste' atribuído diretamente a ele.
-  Como o valor é uma string literal, o input não está vinculado a nenhuma propriedade do componente.
-  -->
-<input [ngModel]="'teste'">
-<br>
+<input 
+  ngModel
+  #meuInputFormControl="ngModel"
+  minlength="5"
+  required
+>
 
-<!--
-    2. Vinculação unidirecional de uma propriedade:
-    Aqui, o valor do input está vinculado à propriedade 'nome' do componente.
-    Qualquer alteração no valor da propriedade 'nome' do componente será refletida no input,
-    mas as alterações no input não afetam a propriedade 'nome' no componente.
-    -->
-<input [ngModel]="nome">
-<br>
-
-<!--
-    3. Vinculação unidirecional com escuta de mudanças:
-    Neste caso, o valor inicial do input é a string literal 'Filipe lima'.
-    Além disso, a diretiva (ngModelChange) escuta qualquer alteração feita no input e executa a função 'onChange'
-    com o valor atualizado como argumento. No entanto, como `ngModel` aqui é unidirecional, a propriedade
-    no componente não é automaticamente atualizada com o valor do input.
-    -->
-<input [ngModel]="'Filipe lima'" (ngModelChange)="onChange($event)">
-<br>
-
-<!--
-    4. Vinculação bidirecional:
-    Aqui, o input está vinculado bidirecionalmente à propriedade 'nome' do componente.
-    Isso significa que o valor do input será atualizado com o valor da propriedade 'nome',
-    e qualquer mudança feita no input também atualizará a propriedade 'nome' no componente.
-    Esta é a forma mais comum de usar o `ngModel` em formulários para capturar e exibir valores dinâmicos.
-    -->
-<input [(ngModel)]="nome">
+<p>Válido: {{meuInputFormControl.valid}}</p>
+<p>Tocado: {{meuInputFormControl.touched}}</p>
+<p>Sujo: {{meuInputFormControl.dirty}}</p>
