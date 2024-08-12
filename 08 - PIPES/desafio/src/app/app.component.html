@@ -19,14 +19,14 @@
                   <td class="operations__table-cell">{{operation.customerName}}</td>
                   <td class="operations__table-cell">
                       <p class="operations__status">
-                          {{operation.customerStatus}}
-                          <img src="assets/icons/active-icon.png" class="operations__icon" width="20" height="20" />
+                          {{operation.customerStatus | status}}
+                          <img [src]="operation.customerStatus | statusIcon" class="operations__icon" width="20" height="20" />
                       </p>
                   </td>
-                  <td class="operations__table-cell">{{operation.operationDate}}</td>
-                  <td class="operations__table-cell">14:30 PM</td>
-                  <td class="operations__table-cell">{{operation.operationValue}}</td>
-                  <td class="operations__table-cell">{{operation.operationRisck}}</td>
+                  <td class="operations__table-cell">{{operation.operationDate | date: "shortDate" }}</td>
+                  <td class="operations__table-cell">{{operation.operationDate | date: "HH:mm a"}}</td>
+                  <td class="operations__table-cell">{{operation.operationValue | currency}}</td>
+                  <td class="operations__table-cell">{{operation.operationRisck | percent: '1.0-2'}}</td>
               </tr>
           </tbody>
       </table>
