@@ -1,0 +1,8 @@
+<h1>Async Pipe com Array</h1>
+
+<h3>Subscribe com Async Pipe</h3>
+
+<ng-container *ngFor="let user of users$ | async">
+    <p>{{user.name}}</p>
+</ng-container>
+
