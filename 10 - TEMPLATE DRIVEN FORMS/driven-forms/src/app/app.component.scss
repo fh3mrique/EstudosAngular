@@ -1,0 +1,17 @@
+/* .valid{
+ border-color: green;
+ 
+ }
+ .invalid{
+    
+ } */
+  
+/* Estilo para um campo válido que foi tocado */
+.ng-valid.ng-touched {
+    border-color: green;  /* Borda verde para campos válidos que foram tocados */
+}
+
+/* Estilo para um campo inválido que foi tocado */
+.ng-invalid.ng-touched {
+    border-color: red;    /* Borda vermelha para campos inválidos que foram tocados */
+}
