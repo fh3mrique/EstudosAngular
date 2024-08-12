@@ -1,0 +1,25 @@
+<h1>Async Pipe com Objeto</h1>
+
+<!-- 
+Aqui, os dados são exibidos diretamente do objeto `userResponse`.
+Este objeto é atualizado manualmente através de um subscribe no TypeScript. 
+-->
+<h3>Subscribe Manual</h3>
+
+<p>NOME: {{userResponse.name}}</p>
+<p>USERNAME: {{userResponse.username}}</p>
+<p>EMAIL: {{userResponse.email}}</p>
+
+
+<!-- 
+Usando o async pipe, o Observable `user$` é automaticamente assinado.
+O `async` pipe gerencia a assinatura e a desinscrição, atualizando o template com os dados mais recentes.
+-->
+<h3>Subscribe pelo async pipe</h3>
+
+<div *ngIf="(user$ | async) as meuUser">
+    <p>NOME: {{meuUser.name}}</p>
+    <p>USERNAME: {{meuUser.username}}</p>
+    <p>EMAIL: {{meuUser.email}}</p>
+</div>
+
