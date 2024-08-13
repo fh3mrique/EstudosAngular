@@ -1,0 +1,11 @@
+<form ngForm #meuForm="ngForm">
+
+    <!-- para as validações do ngForm funcionar corretamente o input control
+     deve ter a propriedade name e a diretiva ngModel -->
+    <input ngModel name="nome" required>
+
+    <p>Válido: {{ meuForm.valid}}</p> 
+    <p>Tocado: {{ meuForm.touched}}</p> 
+    <p>Sujo: {{ meuForm.dirty}}</p> 
+
+</form>
