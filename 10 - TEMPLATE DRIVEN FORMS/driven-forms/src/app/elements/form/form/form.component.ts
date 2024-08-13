@@ -6,13 +6,27 @@ import { NgForm } from '@angular/forms';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements AfterViewInit{
-  /* Acessando a instancia de form group no componente */
-  @ViewChild('meuForm')
-  form!: NgForm;
+export class FormComponent {
   
-  ngAfterViewInit(): void {
-    console.log(this.form)
+  inputText: string = 'texto inicial'
+  textarea: string = 'Descrição inicial'
+  select: number = 1;
+  radioButton : string = '1'
+  checkbox: boolean = true;
+
+  onSubmit(form: NgForm){
+    /* ao enciar o form com o  'texto inicial' esse valor será um objto que ficará salvo em na prop value do dom*/
+    console.log('Onsubmit: ',  form.value);
+
+  }
+
+  onReset(formState: NgForm){
+    console.log('onReset', formState.value);
+    
+    formState.reset();
+    
+    console.log('onReset', formState.value);
+
   }
 
 }
