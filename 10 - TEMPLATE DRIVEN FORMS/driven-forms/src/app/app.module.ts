@@ -8,6 +8,7 @@ import { TextareaComponent } from './elements/textarea/textarea.component';
 import { InputTextComponent } from './elements/input-text/input-text.component';
 import { SelectComponent } from './elements/select/select.component';
 import { RadioButtonComponent } from './elements/radio-button/radio-button.component';
+import { CheckboxComponent } from './elements/checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RadioButtonComponent } from './elements/radio-button/radio-button.compo
     TextareaComponent,
     InputTextComponent,
     SelectComponent,
-    RadioButtonComponent
+    RadioButtonComponent,
+    CheckboxComponent
   ],
   imports: [
     BrowserModule,
