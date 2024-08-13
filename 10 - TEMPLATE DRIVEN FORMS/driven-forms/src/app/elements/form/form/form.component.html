@@ -1,4 +1,5 @@
-<form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
+<!-- Formulário Angular com ngFormOptions para atualizar os valores no evento 'change' -->
+<form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)" [ngFormOptions]="{updateOn: 'change'}">
 
     <input type="text" name="nome" [(ngModel)]="inputText">
     <br>
