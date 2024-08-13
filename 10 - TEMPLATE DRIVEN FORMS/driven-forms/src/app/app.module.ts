@@ -11,6 +11,9 @@ import { RadioButtonComponent } from './elements/radio-button/radio-button.compo
 import { CheckboxComponent } from './elements/checkbox/checkbox.component';
 import { FormComponent } from './elements/form/form/form.component';
 import { NgModelGroupComponent } from './elements/ng-model-group/ng-model-group.component';
+import { MainFormComponent } from './form-with-children/main-form/main-form.component';
+import { FormUserComponent } from './form-with-children/form-user/form-user.component';
+import { FormProfessionComponent } from './form-with-children/form-profession/form-profession.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { NgModelGroupComponent } from './elements/ng-model-group/ng-model-group.
     RadioButtonComponent,
     CheckboxComponent,
     FormComponent,
-    NgModelGroupComponent
+    NgModelGroupComponent,
+    MainFormComponent,
+    FormUserComponent,
+    FormProfessionComponent
   ],
   imports: [
     BrowserModule,
