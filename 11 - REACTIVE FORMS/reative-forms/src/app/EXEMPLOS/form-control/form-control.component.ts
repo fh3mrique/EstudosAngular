@@ -8,7 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class FormControlComponent implements OnInit {
     
-    nome = new FormControl({value: '', disabled: true}, [Validators.required])
+    nome = new FormControl({value: '', disabled: true}, [Validators.required, Validators.minLength(6)])
 
     ngOnInit(): void {
       console.log(this.nome)
