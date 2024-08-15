@@ -1,6 +1,9 @@
 <label for="name">Nome</label>
 <input type="text" id="name" [formControl]="nome" (input)="inputAlterado()" />
-
+<div>
+    <span *ngIf="nome.hasError('required')">O campo nome é obrigatório.</span>
+    <span *ngIf="nome.hasError('minlength') && !nome.hasError('required')">É necessario no minimo 6 caracteres.</span>
+</div>
 
 <p>Valor: {{nome.value}}</p>
 <p>Valido: {{nome.valid}}</p>
