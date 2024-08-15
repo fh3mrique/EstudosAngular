@@ -32,4 +32,8 @@ export class FormControlComponent implements OnInit {
     habilitar(){
       this.nome.disable()
     }
+
+    reset(){
+      this.nome.reset('Valor reset')
+    }
 }
