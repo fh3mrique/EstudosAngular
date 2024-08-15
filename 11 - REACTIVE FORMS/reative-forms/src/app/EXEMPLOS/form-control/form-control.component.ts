@@ -8,7 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class FormControlComponent implements OnInit {
     
-    nome = new FormControl('Valor inicial', [Validators.required])
+    nome = new FormControl({value: '', disabled: true}, [Validators.required])
 
     ngOnInit(): void {
       console.log(this.nome)
@@ -24,5 +24,12 @@ export class FormControlComponent implements OnInit {
 
     inputAlterado(){   
       console.log(this.nome.value)
+    }
+
+    desabilitar(){
+      this.nome.enable()
+    }
+    habilitar(){
+      this.nome.disable()
     }
 }
