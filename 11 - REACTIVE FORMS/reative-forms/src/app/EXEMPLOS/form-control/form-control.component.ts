@@ -41,4 +41,14 @@ export class FormControlComponent implements OnInit {
     reset(){
       this.nome.reset('Valor reset')
     }
+
+    setValidators(){
+      //O setValidators sobreescreve os validadores pre-configurados
+      this.nome.setValidators(Validators.minLength(6));
+    }
+
+    addValidator(){
+      this.nome.setValidators(Validators.minLength(7));
+      this.nome.updateValueAndValidity();
+    }
 }
