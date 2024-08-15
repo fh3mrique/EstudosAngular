@@ -9,7 +9,7 @@ export class UsersService {
 
   constructor(private readonly _httpClient: HttpClient) {}
 
-  getUsers(): Observable<{nama: string}>{
-    return this._httpClient.get<{nama: string}>('https://jsonplaceholder.typicode.com/users');
+  getUsers(): Observable<{ name: string }[]> {
+    return this._httpClient.get<{ name: string }[]>('https://jsonplaceholder.typicode.com/users');
   }
 }
