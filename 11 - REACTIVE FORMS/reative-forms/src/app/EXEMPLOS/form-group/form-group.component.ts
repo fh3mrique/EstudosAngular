@@ -29,4 +29,9 @@ export class FormGroupComponent {
   get email(): FormControl{
     return this.pessoaForm.get('email') as FormControl;
   }
+
+  onFormSubmit(){
+    console.log('onFormSubmit')
+    console.log(this.pessoaForm.value)
+  }
 }
