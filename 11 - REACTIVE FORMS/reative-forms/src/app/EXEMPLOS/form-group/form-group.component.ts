@@ -50,4 +50,13 @@ export class FormGroupComponent {
       }
     })
   }
+
+  alteracaoParcial(){
+    this.pessoaForm.patchValue({
+      nome: 'Nome alt',
+      endereco: {
+        rua: 'Rua alt'
+      }
+    })
+  }
 }
