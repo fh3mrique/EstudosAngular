@@ -8,10 +8,21 @@
 
     <label for="email">Email:</label>
     <input type="text" id="email" formControlName="email">
-    <p *ngIf="email.hasError('required')">O email é obrigatório.</p>
+    <p *ngIf="email.hasError('required')">A rua é obrigatório.</p>
+
+    <div formGroupName="endereco">
+        <label for="street">Rua: </label>
+        <input type="text" id="street" formControlName="rua">
+        <p *ngIf="pessoaForm.get('endereco')?.get('rua')?.hasError('required')">O email é obrigatório.</p>
+        <br>
+
+        <label for="number">Número: </label>
+        <input type="text" id="number" formControlName="numero">
+    </div>
     <br>
 
     <button type="submit" [disabled]="!pessoaForm.valid">Enviar</button>
 
     <p>Formulário válido: {{pessoaForm.valid}}</p>
+    <p>Formulário Endereço válido: {{pessoaForm.get('endereco')?.valid}}</p>
 </form>
