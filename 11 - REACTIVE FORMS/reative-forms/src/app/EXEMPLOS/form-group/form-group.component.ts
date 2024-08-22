@@ -20,6 +20,10 @@ export class FormGroupComponent {
     console.log(this.pessoaForm);
 
     console.log(this.pessoaForm.get('nome'));
+
+    this.pessoaForm.valueChanges.subscribe((value) => {
+      console.log('Pessoa form', value)
+    })
   }
 
   get nome(): FormControl{
@@ -33,5 +37,17 @@ export class FormGroupComponent {
   onFormSubmit(){
     console.log('onFormSubmit')
     console.log(this.pessoaForm.value)
+  }
+
+  alteracaoTotal(){
+    console.log('alteracaoTotal')
+    this.pessoaForm.setValue({
+      nome: 'Nome alt',
+      email: 'Email alt',
+      endereco: {
+        rua: 'Rua alt',
+        numero: 'Numero alt',
+      }
+    })
   }
 }
