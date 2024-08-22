@@ -11,4 +11,18 @@ export class FormGroupComponent {
     nome: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required]),
   })
+
+  constructor(){
+    console.log(this.pessoaForm);
+
+    console.log(this.pessoaForm.get('nome'));
+  }
+
+  get nome(): FormControl{
+    return this.pessoaForm.get('nome') as FormControl;
+  }
+
+  get email(): FormControl{
+    return this.pessoaForm.get('email') as FormControl;
+  }
 }

@@ -1,11 +1,14 @@
 <form [formGroup]="pessoaForm">
 
     <label for="name">Nome:</label>
-    <input type="text" id="name" formControlName="nome" >
+    <input type="text" id="name" formControlName="nome">
+    <!--<p *ngIf="pessoaForm.get('nome')?.hasError('required')">O nome é obrigatório.</p>-->
+    <p *ngIf="nome?.hasError('required')">O nome é obrigatório.</p>
     <br>
 
     <label for="email">Email:</label>
     <input type="text" id="email" formControlName="email">
+    <p *ngIf="email.hasError('required')">O email é obrigatório.</p>
     <br>
 
     <button type="submit" [disabled]="!pessoaForm.valid">Enviar</button>
