@@ -7,16 +7,19 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./form-group.component.css']
 })
 export class FormGroupComponent {
-  pessoaForm = new FormGroup({
-    nome: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required]),
-    endereco: new FormGroup({
-      rua: new FormControl('', [Validators.required]),
-      numero: new FormControl('', [Validators.required])
-    })
-  })
+  pessoaForm = new FormGroup(
+    {
+      nome: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      endereco: new FormGroup({
+        rua: new FormControl('', [Validators.required]),
+        numero: new FormControl('', [Validators.required])
+      })
+    },
+    
+    { updateOn: 'blur' })
 
-  constructor(){
+  constructor() {
     console.log(this.pessoaForm);
 
     console.log(this.pessoaForm.get('nome'));
@@ -26,20 +29,20 @@ export class FormGroupComponent {
     })
   }
 
-  get nome(): FormControl{
+  get nome(): FormControl {
     return this.pessoaForm.get('nome') as FormControl;
   }
 
-  get email(): FormControl{
+  get email(): FormControl {
     return this.pessoaForm.get('email') as FormControl;
   }
 
-  onFormSubmit(){
+  onFormSubmit() {
     console.log('onFormSubmit')
     console.log(this.pessoaForm.value)
   }
 
-  alteracaoTotal(){
+  alteracaoTotal() {
     console.log('alteracaoTotal')
     this.pessoaForm.setValue({
       nome: 'Nome alt',
@@ -51,7 +54,7 @@ export class FormGroupComponent {
     })
   }
 
-  alteracaoParcial(){
+  alteracaoParcial() {
     this.pessoaForm.patchValue({
       nome: 'Nome alt',
       endereco: {
