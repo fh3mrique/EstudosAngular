@@ -3,9 +3,9 @@
 
 
 <div>
-    <p style="color: orange;">Validando...</p>
-    <p style="color: green;">Usuário existente.</p>
-    <p style="color: red;">Usuário inexistente.</p>
+    <p style="color: orange;" *ngIf="nome.pending">Validando...</p>
+    <p style="color: green;" *ngIf="!nome.pending && !nome.hasError('userValidator') && nome.valid && nome.dirty">Usuário existente.</p>
+    <p style="color: red;" *ngIf="!nome.pending && !nome.hasError('userValidator') && !nome.valid && nome.dirty">Usuário inexistente.</p>
 </div>
 
 <p>Valido: {{nome.valid}}</p>
