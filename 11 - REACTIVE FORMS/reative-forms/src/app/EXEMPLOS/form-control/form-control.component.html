@@ -4,6 +4,8 @@
     <span *ngIf="nome.hasError('required')">O campo nome é obrigatório.</span>
     <span *ngIf="nome.hasError('minlength') && !nome.hasError('required')">É necessario no minimo 6 caracteres.</span>
     <span *ngIf="nome.hasError('maxlength') && !nome.hasError('required')">É necessario no maximo 7 caracteres.</span>
+
+    <span *ngIf="nome.hasError('invalidText') && !nome.hasError('required')" style="color: red;">{{nome.errors?.['invalidText']}}</span>
 </div>
 
 <p>Valor: {{nome.value}}</p>

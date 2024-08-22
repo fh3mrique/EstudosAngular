@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { invalidTextValidator } from './invalid-text-validator';
 
 @Component({
   selector: 'app-form-control',
@@ -8,8 +9,9 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class FormControlComponent implements OnInit {
     
-    nome = new FormControl({value: '', disabled: true}, [Validators.required, Validators.minLength(6)])
+    //nome = new FormControl({value: '', disabled: true}, [Validators.required, Validators.minLength(6)])
     //nome = new FormControl('Inicial', {nonNullable: true, validators: [Validators.required], updateOn: 'blur' })
+    nome = new FormControl('Inicial', [invalidTextValidator('Filipe')])
 
     ngOnInit(): void {
       console.log(this.nome)
