@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ValidadorAssincronoComponent } from './EXEMPLOS/validador-assincrono/validador-assincrono.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormGroupComponent } from './EXEMPLOS/form-group/form-group.component';
+import { FormArrayComponent } from './EXEMPLOS/form-array/form-array.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormGroupComponent } from './EXEMPLOS/form-group/form-group.component';
     FormControlComponent,
     ValidadorAssincronoComponent,
     FormGroupComponent,
+    FormArrayComponent,
   ],
   imports: [
     BrowserModule,
