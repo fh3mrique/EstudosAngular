@@ -1,10 +1,13 @@
 <form [formGroup]="musicasForm">
-    <button (click)="addMusica()">Adicionar</button>
+    <button (click)="adcionarMusica()">Adicionar</button>
 
     <div formArrayName="musicas">
         <div *ngFor="let musica of musicas.controls; let i = index">
             <label [for]="'musica-' + i">Música:</label>
             <input type="text" [id]="'musica-' + i" [formControlName]="i">
+
+            <br>
+            <button (click)="removerMusica(i)">- Remover</button>
         </div>
     </div>
 

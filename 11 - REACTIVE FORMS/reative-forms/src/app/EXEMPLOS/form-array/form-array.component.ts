@@ -21,7 +21,11 @@ export class FormArrayComponent {
     return this.musicasForm.get('musicas') as FormArray;
   }
 
-  addMusica(){
-    
+  adcionarMusica(){
+    this.musicas.push(new FormControl('Novo', [Validators.required]));
+  }
+
+  removerMusica(musicasIndex: number){
+    this.musicas.removeAt(musicasIndex);
   }
 }
