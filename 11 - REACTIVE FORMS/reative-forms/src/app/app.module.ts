@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormGroupComponent } from './EXEMPLOS/form-group/form-group.component';
 import { FormArrayComponent } from './EXEMPLOS/form-array/form-array.component';
 import { FormArrayComGroupComponent } from './EXEMPLOS/form-array-com-group/form-array-com-group.component';
+import { FormBuilderComponent } from './EXEMPLOS/form-builder/form-builder.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormArrayComGroupComponent } from './EXEMPLOS/form-array-com-group/form
     FormGroupComponent,
     FormArrayComponent,
     FormArrayComGroupComponent,
+    FormBuilderComponent,
   ],
   imports: [
     BrowserModule,
