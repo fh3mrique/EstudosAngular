@@ -24,4 +24,15 @@ export class FormArrayComGroupComponent {
   get musicas(): FormArray {
     return this.musicasForm.get('musicas') as FormArray;
   }
+
+  adicionarMusica(){
+    this.musicas.push(new FormGroup({
+      titulo: new FormControl('', [Validators.required]),
+      banda: new FormControl('', [Validators.required]),
+    }));
+  }
+
+  removerMusica(musicaIndex: number){
+    this.musicas.removeAt(musicaIndex);
+  }
 }
