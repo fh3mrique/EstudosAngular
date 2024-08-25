@@ -15,6 +15,7 @@ import { FormBuildExternoComponent } from './EXEMPLOS/form-build-externo/form-bu
 import { FormBuildExternoComServiceComponent } from './EXEMPLOS/form-build-externo-com-service/form-build-externo-com-service.component';
 import { FormCompFilhosComponent } from './EXEMPLOS/form-comp-filhos/form-comp-filhos.component';
 import { EnderecoComponent } from './EXEMPLOS/form-comp-filhos/components/endereco/endereco.component';
+import { MarkAsTouchedComponent } from './EXEMPLOS/mark-as-touched/mark-as-touched.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EnderecoComponent } from './EXEMPLOS/form-comp-filhos/components/endere
     FormBuildExternoComServiceComponent,
     FormBuildExternoComponent,
     FormCompFilhosComponent,
-    EnderecoComponent
+    EnderecoComponent,
+    MarkAsTouchedComponent
   ],
   imports: [
     BrowserModule,
