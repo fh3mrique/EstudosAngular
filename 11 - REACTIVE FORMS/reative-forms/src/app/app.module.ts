@@ -13,6 +13,8 @@ import { FormArrayComGroupComponent } from './EXEMPLOS/form-array-com-group/form
 import { FormBuilderComponent } from './EXEMPLOS/form-builder/form-builder.component';
 import { FormBuildExternoComponent } from './EXEMPLOS/form-build-externo/form-build-externo.component';
 import { FormBuildExternoComServiceComponent } from './EXEMPLOS/form-build-externo-com-service/form-build-externo-com-service.component';
+import { FormCompFilhosComponent } from './EXEMPLOS/form-comp-filhos/form-comp-filhos.component';
+import { EnderecoComponent } from './EXEMPLOS/form-comp-filhos/components/endereco/endereco.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FormBuildExternoComServiceComponent } from './EXEMPLOS/form-build-exter
     FormBuilderComponent,
     FormBuildExternoComponent,
     FormBuildExternoComServiceComponent,
-    FormBuildExternoComponent
+    FormBuildExternoComponent,
+    FormCompFilhosComponent,
+    EnderecoComponent
   ],
   imports: [
     BrowserModule,
