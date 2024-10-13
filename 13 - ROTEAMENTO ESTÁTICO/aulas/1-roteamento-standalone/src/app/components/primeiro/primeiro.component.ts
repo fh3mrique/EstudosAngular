@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { concat } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-primeiro',
@@ -8,8 +7,12 @@ import { concat } from 'rxjs';
   templateUrl: './primeiro.component.html',
   styleUrl: './primeiro.component.scss'
 })
-export class PrimeiroComponent implements OnInit {
+export class PrimeiroComponent implements OnInit, OnDestroy {
   ngOnInit() {
-    console.log('PrimeiroComponent')
+    console.log('PrimeiroComponent OnInit');
+  }
+  
+  ngOnDestroy(){
+    console.log('PrimeiroComponent Destroy');
   }
 }
