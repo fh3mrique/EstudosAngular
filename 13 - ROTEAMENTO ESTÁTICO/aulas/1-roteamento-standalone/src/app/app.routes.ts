@@ -32,7 +32,9 @@ export const routes: Routes = [
         component: PrimeiroComponent,
         children: [
             {
-                path: 'filho-a',
+                /* ao acessar o component primeiro automaticamente o 
+                filho a será renderizado */
+                path: '',
                 component: FilhoAComponent,
                 title: 'FilhoA'
             },
