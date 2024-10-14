@@ -35,29 +35,7 @@ export const routes: Routes = [
     },
     {
         path: 'componentes/primeiro',
-        component: PrimeiroComponent,
-        children: [
-            {
-                /* ao acessar o component primeiro automaticamente o 
-                filho a será renderizado */
-                path: '',
-                component: FilhoAComponent,
-                title: 'FilhoA'
-            },
-            {
-                path: 'filho-b',
-                component: FilhoBComponent,
-                title: 'FilhoB'
-            },
-            {
-                path: 'redirect-b',
-                redirectTo: 'filho-b'
-            },
-            {
-                path: 'redirect-a',
-                redirectTo: ''
-            },
-        ]
+        loadChildren: () => import('./components/primeiro/primeiro.routes').then(m => m.primeiroRoutes),
     },
     {
         path: 'componentes/segundo',
