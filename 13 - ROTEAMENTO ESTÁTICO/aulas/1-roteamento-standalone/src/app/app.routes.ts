@@ -18,6 +18,7 @@ import { PaginaNaoEncontradaComponent } from './components/pagina-nao-encontrada
 export const routes: Routes = [
     {
         path: '',
+        title: 'Inicial',
         component: InicialComponent,
     },
     {
