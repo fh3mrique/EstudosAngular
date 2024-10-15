@@ -23,24 +23,7 @@ export const routes: Routes = [
     {
         path: 'transactions',
         title: 'Transações',
-        component: TransactionsComponent,
-        children: [
-            {
-                path: '',
-                redirectTo: 'credit',
-                pathMatch: 'full'
-            },
-            {
-                path: 'credit',
-                title: 'Credito',
-                component: CreditComponent
-            },
-            {
-                path: 'debit',
-                title: 'Debito',
-                component: DebitComponent
-            },
-        ]
+        loadChildren: () => import('./components/transactions/transactions.routes').then(m => m.TransactionsRoutes),   
     },
     {
         path: '**',
