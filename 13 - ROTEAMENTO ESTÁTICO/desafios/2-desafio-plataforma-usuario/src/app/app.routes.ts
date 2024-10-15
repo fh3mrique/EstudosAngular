@@ -17,29 +17,7 @@ export const routes: Routes = [
     {
         path: 'general',
         title: 'Geral',
-        component: GeneralComponent,
-        children: [
-            {
-                path: '',
-                redirectTo: 'basic',
-                pathMatch: 'full'
-            },
-            {
-                path: 'basic',
-                title: 'Basico',
-                component: BasicComponent
-            },
-            {
-                path: 'contact',
-                title: 'Contato',
-                component: ContactComponent
-            },
-            {
-                path: 'address',
-                title: 'Endereço',
-                component: AddressComponent
-            },
-        ]
+        loadChildren: () => import('./components/general/general.routes').then(m => m.GeneralRoutes),    
     },
 
     {
