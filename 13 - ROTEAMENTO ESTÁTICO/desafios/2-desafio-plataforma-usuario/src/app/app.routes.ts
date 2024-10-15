@@ -7,6 +7,7 @@ import { AddressComponent } from './components/general/components/address/addres
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { CreditComponent } from './components/transactions/components/credit/credit.component';
 import { DebitComponent } from './components/transactions/components/debit/debit.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 export const routes: Routes = [
     {
@@ -15,6 +16,7 @@ export const routes: Routes = [
     },
     {
         path: 'general',
+        title: 'Geral',
         component: GeneralComponent,
         children: [
             {
@@ -24,14 +26,17 @@ export const routes: Routes = [
             },
             {
                 path: 'basic',
+                title: 'Basico',
                 component: BasicComponent
             },
             {
                 path: 'contact',
+                title: 'Contato',
                 component: ContactComponent
             },
             {
                 path: 'address',
+                title: 'Endereço',
                 component: AddressComponent
             },
         ]
@@ -39,6 +44,7 @@ export const routes: Routes = [
 
     {
         path: 'transactions',
+        title: 'Transações',
         component: TransactionsComponent,
         children: [
             {
@@ -48,12 +54,19 @@ export const routes: Routes = [
             },
             {
                 path: 'credit',
+                title: 'Credito',
                 component: CreditComponent
             },
             {
                 path: 'debit',
+                title: 'Debito',
                 component: DebitComponent
             },
         ]
+    },
+    {
+        path: '**',
+        title: 'Pagina não encontrada',
+        component: NotfoundComponent
     }
 ];
