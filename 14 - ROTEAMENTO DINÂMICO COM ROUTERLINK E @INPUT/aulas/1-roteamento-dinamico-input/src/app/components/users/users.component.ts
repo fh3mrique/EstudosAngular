@@ -2,12 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { IUser, UsersSevice } from '../../services/users.service';
 import { AsyncPipe } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [AsyncPipe, RouterLink],
+  imports: [AsyncPipe, RouterLink, RouterOutlet],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })
@@ -19,5 +19,4 @@ export class UsersComponent implements OnInit {
   ngOnInit(){
     this.usersList$ = this._userService.getUsers();
   }
-
 }

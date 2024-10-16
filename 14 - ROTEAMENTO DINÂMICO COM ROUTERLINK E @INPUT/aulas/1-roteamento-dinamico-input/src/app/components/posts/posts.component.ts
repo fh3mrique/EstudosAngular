@@ -11,14 +11,18 @@ import { AsyncPipe } from '@angular/common';
   styleUrl: './posts.component.scss'
 })
 export class PostsComponent implements OnInit {
-  postList$: Observable<IPost[]> =  of([]);
-  
-  @Input() userId: string = ''
-  
+  postList$: Observable<IPost[]> = of([]);
+
+  //@Input() userId: string = ''
+  @Input() set userId(value: string) {
+    console.log(value);
+    this.postList$ = this._postsService.getUserPosts(value);
+  }
+
   private readonly _postsService = inject(PostsService);
 
   ngOnInit(): void {
     console.log(this.userId)
-    this.postList$  = this._postsService.getUserPosts(this.userId);
+    //this.postList$  = this._postsService.getUserPosts(this.userId);
   }
 }

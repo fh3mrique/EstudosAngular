@@ -12,10 +12,17 @@ export const routes: Routes = [
     {
         path: 'users',
         component: UsersComponent,
+        children: [
+            {
+                /* path com parametro dinâmico */
+                path: 'posts/:userId',
+                component: PostsComponent
+            }
+        ]
     },
+    /*
     {
-        /* path com parametro dinâmico */
         path: 'posts/:userId',
         component: PostsComponent
-    }
+    }*/
 ];
