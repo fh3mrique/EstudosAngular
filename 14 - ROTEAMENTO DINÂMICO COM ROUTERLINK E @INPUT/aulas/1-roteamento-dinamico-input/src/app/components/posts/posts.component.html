@@ -1,1 +1,4 @@
-<p>posts works!</p>
+@for(post of postList$ | async; track post;){
+    <div>titulo: {{post.title}}</div>
+    <div>conteudo: {{post.body}}</div>
+}
