@@ -1,6 +1,6 @@
 <h1>Lista de usuarios</h1>
 @for(user of usersList$ | async; track user){
-    <div style="padding: 10px; cursor: pointer;">
+    <div style="padding: 10px; cursor: pointer;" [routerLink]="['/user', user.id]">
         <div>Codigo: {{user.id}}</div>
         <div>Nome: {{user.name}}</div>
     </div>
