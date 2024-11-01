@@ -1,1 +1,9 @@
-<p>post works!</p>
+<h1>Post:</h1>
+
+@if (post$ | async; as post){
+    <div style="padding: 1opx;">
+        <div>Titulo: {{post.title}} </div>
+        <div>Conteudo: {{post.body}} </div>
+        <div>Codigo: {{post.id}} </div>
+    </div>
+}
