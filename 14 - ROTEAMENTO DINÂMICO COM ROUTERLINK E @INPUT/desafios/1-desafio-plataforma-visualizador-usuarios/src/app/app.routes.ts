@@ -5,6 +5,7 @@ import { UserContainerComponent } from './components/user-container/user-contain
 import { TodosComponent } from './components/user-container/components/todos/todos.component';
 import { AlbumsComponent } from './components/user-container/components/albums/albums.component';
 import { PostsComponent } from './components/user-container/components/posts/posts.component';
+import { PostComponent } from './components/user-container/components/post/post.component';
 
 export const routes: Routes = [
     {
@@ -39,6 +40,10 @@ export const routes: Routes = [
                 path: 'posts',
                 component: PostsComponent
             },
+            {
+                path: 'post/:id',
+                component: PostComponent
+            }
         ]
 
     },
