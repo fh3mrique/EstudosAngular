@@ -41,7 +41,7 @@ export const routes: Routes = [
                 component: PostsComponent
             },
             {
-                path: 'post/:id',
+                path: 'post/:postId',
                 component: PostComponent
             }
         ]
